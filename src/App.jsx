@@ -7,6 +7,7 @@ function App() {
 		<div className="">
 			<Nav />
 			<Hero />
+			<Products />
 		</div>
 	);
 }
