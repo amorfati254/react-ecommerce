@@ -8,7 +8,7 @@ module.exports = {
 				primary: ["Poppins", "sans-serif"],
 			},
 			backgroundImage: {
-				'hero-img': "url('/src/assets/img/hero-img.jpg')",
+				'hero-img': "url('/src/assets/watch_4.webp')",
 			},
 		},
 	},

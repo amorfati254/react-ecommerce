@@ -1,4 +1,5 @@
 import React from "react";
+import products from "../../public/products";
 import ProductCard from "./ProductCard";
 
 export default function Products() {
@@ -10,12 +11,9 @@ export default function Products() {
 				</h2>
 			</div>
 			<div className="grid md:grid-cols-2 lg:grid-cols-3 mx-10 gap-10 mt-10 ">
-				<ProductCard />
-				<ProductCard />
-				<ProductCard />
-				<ProductCard />
-				<ProductCard />
-				<ProductCard />
+				{products.map((product) => (
+					<ProductCard product={product} key={product.id} />
+				))}
 			</div>
 		</div>
 	);

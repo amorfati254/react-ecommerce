@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import CartCard from "./CartCard";
 
 function Nav() {
-	const handleClick = (e) => {
+	const handleClickNav = (e) => {
 		const navBar = document.getElementById("navbar-sticky");
+		navBar.classList.toggle("hidden");
+	};
+	const handleClickCart = (e) => {
+		const navBar = document.getElementById("cart-dropdown");
 		navBar.classList.toggle("hidden");
 	};
 	return (
@@ -14,19 +19,43 @@ function Nav() {
 					</span>
 				</a>
 				<div class="flex md:order-2">
-					<button
-						type="button"
-						class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-					>
-						Get started
-					</button>
+					<div className="relative">
+						<button
+							data-collapse-toggle="navbar-sticky"
+							type="button"
+							class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+							aria-controls="navbar-sticky"
+							aria-expanded="false"
+							onClick={handleClickCart}
+						>
+							<span class="sr-only">Open main menu</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+								/>
+							</svg>
+						</button>
+						<div id="cart-dropdown" className="hidden fixed top-16 right-4">
+							<CartCard />
+						</div>
+					</div>
+
 					<button
 						data-collapse-toggle="navbar-sticky"
 						type="button"
 						class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
 						aria-controls="navbar-sticky"
 						aria-expanded="false"
-						onClick={handleClick}
+						onClick={handleClickNav}
 					>
 						<span class="sr-only">Open main menu</span>
 						<svg

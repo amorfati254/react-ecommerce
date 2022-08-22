@@ -6,11 +6,11 @@ export default function Hero() {
 			<div className="md:basis-2/3 flex flex-col justify-center items-center bg-hero-img md:bg-none bg-cover bg-center">
 				<div className="flex flex-col justify-center items-center backdrop-blur-sm flex-1 px-2">
 					<h1 class="text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-gray-900 md:text-5xl lg:text-6xl">
-						Best Fashion Online Store
+						Best Electronics Online Store
 					</h1>
 					<p class="mb-6 text-lg font-normal text-white md:text-gray-500 lg:text-xl sm:px-16 xl:px-48 text-center">
-						Here at React Ecommerce we focus on bringing you quality fashion
-						clothes at reasonable prices.
+						Here at React Ecommerce we focus on bringing you quality electronic
+						devices at reasonable prices.
 					</p>
 					<a
 						href="#"
